@@ -8,7 +8,8 @@ function App() {
 
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState("");
-
+  const [cityName, setCityName] = useState("")
+  console.log(weather);
   const searchPressed = (e) => {
     e.preventDefault();
     fetch(
@@ -22,6 +23,7 @@ function App() {
       })
       .then((result) => {
         setWeather([...result.list]);
+        setCityName(result.city.name)
       });
     setSearch("");
   };
@@ -39,7 +41,7 @@ function App() {
             searchPressed={searchPressed}
           />
           {/* Weather */}
-          <h2>{search.toUpperCase()}</h2>
+          <h2>{cityName}</h2>
           <Weather weather={weather} />
         </div>
       </div>

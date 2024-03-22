@@ -1,5 +1,12 @@
+<<<<<<< Updated upstream
 To start the programm
 ### `npm i`
+=======
+To start use:
+
+### `npm i`
+
+>>>>>>> Stashed changes
 ### `npm start`
 
 # Getting Started with Create React App
